@@ -1,0 +1,35 @@
+[project]
+name = "forest-cover-prediction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Olivia Young", email = "orose29@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "kagglehub>=1.0.2",
+    "optuna>=5.0.0",
+    "pandas>=3.0.6",
+    "plotly>=7.1.0",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.64.0",
+    "watchdog>=6.0.0",
+    "xgboost>=3.4.1",
+]
+
+[project.scripts]
+forest-cover-prediction = "forest_cover_prediction:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
