@@ -10,7 +10,7 @@ classification models, and lets users generate live predictions from manual feat
 docker build -t forest-cover-prediction .
 docker run --rm -p 8501:8501 forest-cover-prediction
 ```
-Then open **http://localhost:8505** in your browser.
+Then open **http://localhost:8501** in your browser.
 
 ### Run locally without Docker
 ```bash
@@ -42,3 +42,13 @@ streamlit run app/streamlit.py
 
 ## Data
 This project uses the [Forest Cover Type dataset](<https://www.kaggle.com/competitions/dsaib-2025-2026-forest-cover-type-2/data>). The training data is bundled directly in this repo (`data/raw/`) so the app runs out of the box with no Kaggle account or API token required.
+
+
+## Development
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
+```bash
+uv sync          # install dependencies
+uv run pytest    # run tests
+```
+Continuous integration (`.github/workflows/ci.yml`) runs tests and linting on every push.
