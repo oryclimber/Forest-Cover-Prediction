@@ -19,6 +19,7 @@ streamlit run app/streamlit.py
 ```
 
 ## Project Structure
+```
 ├── app/
 │ ├── streamlit_app.py # Entrypoint
 │ └── tabs/
@@ -30,6 +31,7 @@ streamlit run app/streamlit.py
 │ └── models.py # Model definitions, benchmarking, tuning
 ├── data/raw/ # Training data
 └── Dockerfile
+```
 
 ## App Overview
 - **Dataset tab** — cover type distribution, wilderness area breakdown, elevation by cover type
