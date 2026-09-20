@@ -20,17 +20,30 @@ streamlit run app/streamlit.py
 
 ## Project Structure
 ```
+├── .github/
+│   └── workflows/
+│       └── ci.yml
 ├── app/
-│ ├── streamlit_app.py # Entrypoint
-│ └── tabs/
-│ ├── dataset_tab.py # Data exploration
-│ ├── model_tab.py # Model benchmarking
-│ └── prediction_tab.py # Live prediction interface
+│   ├── streamlit_app.py         # Entrypoint
+│   └── tabs/
+│       ├── dataset_tab.py       # Data exploration
+│       ├── model_tab.py         # Model benchmarking
+│       └── prediction_tab.py    # Live prediction interface
 ├── src/forest_cover_prediction/
-│ ├── data.py # Data loading & feature engineering
-│ └── models.py # Model definitions, benchmarking, tuning
-├── data/raw/ # Training data
-└── Dockerfile
+│   ├── data.py                  # Data loading & feature engineering
+│   ├── models.py                # Model definitions, benchmarking, tuning
+│   └── predict.py               # Test predictions
+├── tests/
+│   ├── test_models.py
+│   └── test_predict.py
+├── data/raw/                    # Training data
+├── .dockerignore
+├── .gitignore
+├── .pre-commit-config.yaml
+├── Dockerfile
+├── README.md
+├── pyproject.toml
+└── uv.lock
 ```
 
 ## App Overview
